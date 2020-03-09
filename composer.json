@@ -1,7 +1,6 @@
 {
   "name": "zhenhaihou/richfilemanager-php",
   "description": "PHP连接到RichFilemanager",
-  "type": "project",
   "keywords": [
     "richfilemanager",
     "filemanager",

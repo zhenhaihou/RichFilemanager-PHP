@@ -489,7 +489,11 @@ class BaseUploadHandler
             if ($uploaded_bytes === $file_size) {
                 break;
             }
-            $name = $this->upcount_name($name);
+            //把原文件改名，现文件覆盖
+            $exit_file_old = $this->get_upload_path($name);
+            $exit_file_no_ext =substr($exit_file_old,0,-4);
+            rename($exit_file_old, $exit_file_no_ext.date('YmdHis').'.php');            
+            // $name = $this->upcount_name($name);
         }
         return $name;
     }
